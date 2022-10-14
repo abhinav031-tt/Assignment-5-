@@ -2,24 +2,26 @@
 
 
 class student:
-    def info (self,) :
-     name =  "Ram"
-     rollno = "45"
-    pass
+  def __init__(self,name,rollno) :
+    self._name = name
+    self._rollno = rollno
+    
 
     def setName(self,name):
-         self.name = name
+         self._name = name
 
     def getName(self,name):
-        return self.name
+        return self._name
 
     def setRollNumber(self):
-         set.rollno = self.rollno
+         set._rollno = self.rollno
 
     def getRollNumber(self):
-        return self.rollno 
+        return self._rollno 
 
-obj = student ("Ram" , 45)
+student_obj = student (input("Enter a name : -"), input("Enter a rollno: - "))
 
-obj.getName ()
-obj.getRollNumber()
+student_obj.set_name(input("Enter a name : -"))
+print(student_obj.get_name())
+student_obj.set_rollno(input("Enter a rollno : -"))
+print(student_obj.get_rollno())
